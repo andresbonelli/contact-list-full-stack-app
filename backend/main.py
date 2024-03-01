@@ -21,7 +21,7 @@ def create_contact():
     new_contact = Contact(first_name=first_name, last_name=last_name, email=email)
     try:
         db.session.add(new_contact)
-        de.session.commit()
+        db.session.commit()
     except Exception as e:
         return (jsonify({"message": str(e)}),400)
 
