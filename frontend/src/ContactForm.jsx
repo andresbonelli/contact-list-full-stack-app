@@ -34,19 +34,19 @@ const ContactForm = ({ existingContact = {}, updateCallback}) => {
     }
 
     return <form onSubmit={handleFormSubmit}>
-        <div>
+        <div className="form-input">
             <label htmlFor="firstName">First Name: </label>
             <input type="text" id="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
         </div>
-        <div>
+        <div className="form-input">
             <label htmlFor="lastName">Last Name: </label>
             <input type="text" id="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)}/>
         </div>
-        <div>
-            <label htmlFor="email">E-mail address: </label>
+        <div className="form-input">
+            <label htmlFor="email">E-mail: </label>
             <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
         </div>
-        <button type="submit">{updating ? "Update Contact" : "Create new contact"}</button>
+        <button className="form-actions" type="submit">{updating ? "Update Contact" : "Create new contact"}</button>
     </form>
 
 }

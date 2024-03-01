@@ -1,37 +1,199 @@
-
-:root {
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set the body font family and background color */
+  body {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-  
+    background-color: #f4f4f4;
+
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
+  /* Container for the entire application */
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    
+    
+    
+  }
+  
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    max-width: 800px; /* Limiting the table size */
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Table header styles */
+  table th {
+    background-color: #666;
+    color: #fff;
+    text-align: left;
+  }
+  
+  /* Table row styles */
+  table td {
+    background-color: #fff;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: medium;
+    padding: 10px 14px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* slightly rounder edges */
+    margin-right: 5px; /* add some spacing between buttons */
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+
+.action-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: small;
+    padding: 6px 12px; /* smaller padding */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* slightly rounder edges */
+    margin-right: 5px; /* add some spacing between buttons */
+  }
+  
+  .action-button:hover {
+    background-color: #555;
+  }
+  
+  /* Center the form */
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Form styles */
+  form {
+    width: 100%;
+    max-width: 600px; /* Limiting the form size */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-input {
+    display: flex;
+    justify-content: flex-end; /* Justify input elements to the right */
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Label styles */
+  .form-input label {
+    margin-right: 10px;
+  }
+  
+  /* Input styles */
+  .form-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  /* Button styles */
+.form-actions button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-actions button:hover {
+    background-color: #555;
+  }
+  
+  
+  
+  /* Responsive adjustments */
+  @media only screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+    
+    table {
+      max-width: 100%;
+    }
+    
+    form {
+      max-width: 100%;
+    }
+  }
+  
+  /* Modal styles */
   .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0,0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .close {
+    color: #999;
+    font-size: 20px;
+    cursor: pointer;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+    margin-top: -10px;
+  }
+  
+  .close:hover {
+    color: #666;
+  }
+  

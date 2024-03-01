@@ -3,6 +3,9 @@ import React from "react";
 const ContactList = ({ contacts, updateContact, updateCallback }) => {
 
     async function handleDeleteButton(id) {
+        const isConfirmed = window.confirm("Delete contact?");
+        if (!isConfirmed) return
+
         console.log(`Deleted contact with Id: ${id}`)
         try {
             const options = {
@@ -23,7 +26,7 @@ const ContactList = ({ contacts, updateContact, updateCallback }) => {
 
     return <>
     <div>
-        <h2>Contacts</h2>
+        <h2>Contact list</h2>
         <table>
             <thead>
                 <tr>
@@ -40,8 +43,8 @@ const ContactList = ({ contacts, updateContact, updateCallback }) => {
                         <td>{contact.lastName}</td>
                         <td>{contact.email}</td>
                         <td>
-                            <button onClick={() => updateContact(contact)}>Update</button>
-                            <button onClick={() => handleDeleteButton(contact.id)}>Delete</button>
+                            <button className="action-button" onClick={() => updateContact(contact)}>Update</button>
+                            <button className="action-button" onClick={() => handleDeleteButton(contact.id)}>Delete</button>
                         </td>
                     </tr>
                 ))}
