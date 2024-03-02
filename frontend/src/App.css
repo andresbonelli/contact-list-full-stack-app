@@ -19,12 +19,9 @@ body, h1, h2, h3, p, ul, li {
   
   /* Container for the entire application */
   .container {
-    max-width: 800px;
+    max-width: 800;
     margin: auto;
     padding: 20px;
-    
-    
-    
   }
   
   
@@ -39,14 +36,16 @@ body, h1, h2, h3, p, ul, li {
   /* Table styles */
   table {
     width: 100%;
-    max-width: 800px; /* Limiting the table size */
+    table-layout: fixed;
     border-collapse: collapse;
     margin-top: 20px;
   }
   
   table th, table td {
+    width: 25%;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    margin: 20px;
   }
   
   /* Table header styles */
@@ -54,14 +53,38 @@ body, h1, h2, h3, p, ul, li {
     background-color: #666;
     color: #fff;
     text-align: left;
+    
+  }
+
+  .th-pointer {
+    cursor: pointer;
+  }
+
+  th:last-child {
+    padding-right: 25px;
+    text-align: right;
+   
   }
   
   /* Table row styles */
   table td {
+    
     background-color: #fff;
+  }
+
+  td:last-child {
+    
+    text-align: right;
+    
   }
   
   /* Button styles */
+  .button-container {
+    display: flex;
+    justify-content: right; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    }
+
   button {
     background-color: #333;
     color: #fff;
@@ -83,11 +106,13 @@ body, h1, h2, h3, p, ul, li {
     color: #fff;
     border: none;
     font-size: small;
-    padding: 6px 12px; /* smaller padding */
+    padding: 6px 12px; 
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 5px; /* slightly rounder edges */
-    margin-right: 5px; /* add some spacing between buttons */
+    border-radius: 5px; 
+    margin-right: 5px; /* spacing between buttons */
+    margin-bottom: auto;
+    display: inline-block;
   }
   
   .action-button:hover {
