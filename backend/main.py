@@ -55,6 +55,13 @@ def delete_contact(user_id):
 
     return (jsonify({"message": "User deleted"}), 200)
 
+@app.route("/delete_contacts", methods=["DELETE"])
+def delete_contacts():
+    Contact.query.delete()
+    db.session.commit()
+
+    return (jsonify({"message": "Table deleted"}), 200)
+
 
 if __name__ == "__main__":
     with app.app_context():

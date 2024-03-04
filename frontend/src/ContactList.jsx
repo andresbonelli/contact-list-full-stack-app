@@ -46,7 +46,7 @@ const ContactList = ({ contacts, updateContact, updateCallback }) => {
 
     return <>
     <div>
-        <h2>Contact list</h2>
+        <h2>Contact list App</h2>
         <table>
             <thead>
                 <tr>
