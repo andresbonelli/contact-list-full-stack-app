@@ -16,6 +16,10 @@ body, h1, h2, h3, p, ul, li {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  input, button, label {
+    margin-top: 10px;
+  }
   
   /* Container for the entire application */
   .container {
@@ -65,8 +69,11 @@ body, h1, h2, h3, p, ul, li {
     text-align: right;
    
   }
-  
+
   /* Table row styles */
+  table tr {
+    align-items: baseline;
+  }
   table td {
     
     background-color: #fff;

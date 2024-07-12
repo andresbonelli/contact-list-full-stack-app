@@ -1,6 +1,8 @@
 from flask import request, jsonify
 from config import app, db
 from models import Contact
+from flask_login import LoginManager
+from flask_bcrypt import Bcrypt
 
 @app.route("/contacts", methods=["GET"])
 def get_contacts():

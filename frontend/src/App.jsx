@@ -73,7 +73,7 @@ function App() {
   }
 
   // Callback function called after updating a contact. Invokes previous closeModal function
-  // and fetches the -hopefully- already updated on the backend database list of contacts.
+  // and fetches the -hopefully- already updated on the backend list of contacts database .
   function onUpdate() {
     closeModal()
     fetchContacts()
